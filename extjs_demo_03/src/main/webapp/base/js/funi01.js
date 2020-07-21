@@ -40,9 +40,10 @@
    var myWin =   Ext.create("Ext.window.Window",{
       id: "myWin",
       title: "楼栋业务类型选择",
-      width: 500, //"70%",
-      height: 200,//"80%",
+      width: 500, //"30%", //"70%",
+      height: 200,//"30%",//"80%",
       resizable: true,//false,
+      autoScroll: true,
       modal: true,
       border:0,
       items: [
@@ -103,116 +104,65 @@
 
                           //选择的不是新建业务类型
                           if(newValue.regiType === 1){
-                            //关联项目选项的提示信息
-                           tip_tbtext_itemId_hidden = true;
-                            //楼栋类型
-                           is_history_hidden = false;
-                            //楼栋编号
-                            natuId_text_itemId_hidden = true;
-                            //变更类型
-                            chageType_radiogroup_itemId_hidden = true;
-                            //其他
-                            otherCheck_fieldset_itemId_hidden = true;
-                            //地号
-                            queryByDh_txt_itemId_hidden = true;
-                            //项目编号
-                            queryByXmxqid_txt_itemId_hidden = true;
-                            //小区名称
-                            queryByXmxqmc_txt_itemId_hidden = true;
-                            //楼栋地址
-                            queryByLdz_txt_itemId_hidden = true;
-                            //项目名称
-                            periodName_fieldset_itemId_hidden = true;
+                            myWin.queryById("tip_tbtext_itemId").setHidden(true);
+                            myWin.queryById("isHistory").setHidden(false);
+                            myWin.queryById("natuId_text_itemId").setHidden(true);
+                            myWin.queryById("chageType_radiogroup_itemId").setHidden(true);
+                            myWin.queryById("otherCheck_fieldset_itemId").setHidden(true);
+                            myWin.queryById("queryByDh_txt_itemId").setHidden(true);
+                            myWin.queryById("queryByXmxqid_txt_itemId").setHidden(true);
+                            myWin.queryById("queryByXmxqmc_txt_itemId").setHidden(true);
+                            myWin.queryById("queryByLdz_txt_itemId").setHidden(true);
+                            myWin.queryById("periodName_fieldset_itemId").setHidden(true);
                           }else if (newValue.regiType === 2) {
-                            //关联项目选项的提示信息
-                            tip_tbtext_itemId_hidden = true;
-                            //楼栋类型
-                            is_history_hidden = true;
-                            //楼栋编号
-                            natuId_text_itemId_hidden = false;
-                            //变更类型
-                            chageType_radiogroup_itemId_hidden = false;
-                            //其他
-                            otherCheck_fieldset_itemId_hidden = true;
-                            //地号
-                            queryByDh_txt_itemId_hidden = true;
-                            //项目编号
-                            queryByXmxqid_txt_itemId_hidden = true;
-                            //小区名称
-                            queryByXmxqmc_txt_itemId_hidden = true;
-                            //楼栋地址
-                            queryByLdz_txt_itemId_hidden = true;
-                            //项目名称
-                            periodName_fieldset_itemId_hidden = true;
+                            myWin.queryById("tip_tbtext_itemId").setHidden(true);
+                            myWin.queryById("isHistory").setHidden(true);
+                            myWin.queryById("natuId_text_itemId").setHidden(false);
+                            myWin.queryById("chageType_radiogroup_itemId").setHidden(false);
+                            myWin.queryById("otherCheck_fieldset_itemId").setHidden(true);
+                            myWin.queryById("queryByDh_txt_itemId").setHidden(true);
+                            myWin.queryById("queryByXmxqid_txt_itemId").setHidden(true);
+                            myWin.queryById("queryByXmxqmc_txt_itemId").setHidden(true);
+                            myWin.queryById("queryByLdz_txt_itemId").setHidden(true);
+                            myWin.queryById("periodName_fieldset_itemId").setHidden(true);
 
                           }else if (newValue.regiType === 3) {
-                            //关联项目选项的提示信息
-                            tip_tbtext_itemId_hidden = true;
-                            //楼栋类型
-                            is_history_hidden = true;
-                            //楼栋编号
-                            natuId_text_itemId_hidden = false;
-                            //变更类型
-                            chageType_radiogroup_itemId_hidden = true;
-                            //其他
-                            otherCheck_fieldset_itemId_hidden = true;
-                            //地号
-                            queryByDh_txt_itemId_hidden = true;
-                            //项目编号
-                            queryByXmxqid_txt_itemId_hidden = true;
-                            //小区名称
-                            queryByXmxqmc_txt_itemId_hidden = true;
-                            //楼栋地址
-                            queryByLdz_txt_itemId_hidden = true;
-                            //项目名称
-                            periodName_fieldset_itemId_hidden = true;
+                            myWin.queryById("tip_tbtext_itemId").setHidden(true);
+                            myWin.queryById("isHistory").setHidden(true);
+                            myWin.queryById("natuId_text_itemId").setHidden(false);
+                            myWin.queryById("chageType_radiogroup_itemId").setHidden(true);
+                            myWin.queryById("otherCheck_fieldset_itemId").setHidden(true);
+                            myWin.queryById("queryByDh_txt_itemId").setHidden(true);
+                            myWin.queryById("queryByXmxqid_txt_itemId").setHidden(true);
+                            myWin.queryById("queryByXmxqmc_txt_itemId").setHidden(true);
+                            myWin.queryById("queryByLdz_txt_itemId").setHidden(true);
+                            myWin.queryById("periodName_fieldset_itemId").setHidden(true);
 
                           }else if (newValue.regiType === 4) {
-                            //关联项目选项的提示信息
-                            tip_tbtext_itemId_hidden = false;
-                            //楼栋类型
-                            is_history_hidden = true;
-                            //楼栋编号
-                            natuId_text_itemId_hidden = false;
-                            //变更类型
-                            chageType_radiogroup_itemId_hidden = true;
-                            //其他
-                            otherCheck_fieldset_itemId_hidden = true;
-                            //地号
-                            queryByDh_txt_itemId_hidden = true;
-                            //项目编号
-                            queryByXmxqid_txt_itemId_hidden = true;
-                            //小区名称
-                            queryByXmxqmc_txt_itemId_hidden = true;
-                            //楼栋地址
-                            queryByLdz_txt_itemId_hidden = true;
-                            //项目名称
-                            periodName_fieldset_itemId_hidden = false;
+                            myWin.queryById("tip_tbtext_itemId").setHidden(false);
+                            myWin.queryById("isHistory").setHidden(true);
+                            myWin.queryById("natuId_text_itemId").setHidden(false);
+                            myWin.queryById("chageType_radiogroup_itemId").setHidden(true);
+                            myWin.queryById("otherCheck_fieldset_itemId").setHidden(true);
+                            myWin.queryById("queryByDh_txt_itemId").setHidden(true);
+                            myWin.queryById("queryByXmxqid_txt_itemId").setHidden(true);
+                            myWin.queryById("queryByXmxqmc_txt_itemId").setHidden(true);
+                            myWin.queryById("queryByLdz_txt_itemId").setHidden(true);
+                            myWin.queryById("periodName_fieldset_itemId").setHidden(false);
 
                           }else {
+                            myWin.queryById("tip_tbtext_itemId").setHidden(true);
+                            myWin.queryById("isHistory").setHidden(false);
+                            myWin.queryById("natuId_text_itemId").setHidden(true);
+                            myWin.queryById("chageType_radiogroup_itemId").setHidden(true);
+                            myWin.queryById("otherCheck_fieldset_itemId").setHidden(true);
+                            myWin.queryById("queryByDh_txt_itemId").setHidden(true);
+                            myWin.queryById("queryByXmxqid_txt_itemId").setHidden(true);
+                            myWin.queryById("queryByXmxqmc_txt_itemId").setHidden(true);
+                            myWin.queryById("queryByLdz_txt_itemId").setHidden(true);
+                            myWin.queryById("periodName_fieldset_itemId").setHidden(true);
 
                             Ext.Msg.alert("提示信息","未选择正确的业务类型");
-
-                            //关联项目选项的提示信息
-                           tip_tbtext_itemId_hidden = true;
-                            //楼栋类型
-                           is_history_hidden = false;
-                            //楼栋编号
-                            natuId_text_itemId_hidden = true;
-                            //变更类型
-                            chageType_radiogroup_itemId_hidden = true;
-                            //其他
-                            otherCheck_fieldset_itemId_hidden = true;
-                            //地号
-                            queryByDh_txt_itemId_hidden = true;
-                            //项目编号
-                            queryByXmxqid_txt_itemId_hidden = true;
-                            //小区名称
-                            queryByXmxqmc_txt_itemId_hidden = true;
-                            //楼栋地址
-                            queryByLdz_txt_itemId_hidden = true;
-                            //项目名称
-                            periodName_fieldset_itemId_hidden = true;
                           }
                       }
                   }
@@ -224,6 +174,7 @@
                   name: "isHistory",
                   fieldLabel: "楼栋类型<span style='color:red'>*</span>",
                   margin: "20 0 0 0",
+                  itemId: "isHistory",
                   hidden: is_history_hidden,
                   items: [
                     {
