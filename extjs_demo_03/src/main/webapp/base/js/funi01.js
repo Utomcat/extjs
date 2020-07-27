@@ -30,7 +30,7 @@
     //项目编号
     var queryByXmxqid_txt_itemId_hidden = true;
     //小区名称
-    var queryByXmxqmc_txt_itemId_hidden = true;
+    var queryByXmxqmc_txt_itemId_hidden = false;
     //楼栋地址
     var queryByLdz_txt_itemId_hidden = true;
     //项目名称
@@ -195,6 +195,13 @@
                     }
                   ],
                   listeners:{
+                    change: function ( _this, newValue, oldValue, eOpts) {
+                      if(newValue.isHistory === 8){
+                        myWin.queryById("otherCheck_fieldset_itemId").setHidden(false);
+                      }else{
+                        myWin.queryById("otherCheck_fieldset_itemId").setHidden(true);
+                      }
+                    }
 
                   }
                 },
